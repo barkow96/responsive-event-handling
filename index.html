@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Event Handling</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>EVENT HANDLING</h1>
+            <h2>Responsive WEB Design</h2>
+        </header>
+
+        <aside id="leftAside">
+            <h3>WHAT IS THIS SITE ABOUT?</h3>
+            <p>This site is showing basics of event handling using standard JavaScript Library.</p>
+            <ul>
+                <li><span>EVENT BUBBLING</span> is a concept in the DOM (Document Object Model).
+                    It happens when an element receives an event, 
+                    and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.</li>
+                <li><span>EVENT CAPTURING</span> is the other way to do event propagation in the HTML DOM.
+                    In event capturing, an event propagates from the outermost element to the target element.
+                    It is the opposite of event bubbling, where events propagate outwards from the target to the outer elements.</li>
+            </ul>
+            <p>    
+                Additionally, you can adjust the event propagation property.
+                In this way you are able to control whether the first encountered event on the path of the DOM tree in the bubbling or capturing phase, or all of them  will be executed one by one.
+            </p>
+        </aside>
+
+        <main id="main">
+            <div id="tile1" class="tile"></div>
+            <div id="tile2" class="tile"></div>
+            <div id="tile3" class="tile"></div>
+            <div id="tile4" class="tile"></div>
+            <div id="tile5" class="tile"></div>
+            <div id="tile6" class="tile"></div>
+            <div id="tile7" class="tile"></div>
+            <div id="tile8" class="tile"></div>
+            <div id="tile9" class="tile"></div>
+            <div id="tile10" class="tile"></div>
+            <div id="tile11" class="tile"></div>
+            <div id="tile12" class="tile"></div>
+            <div id="tile13" class="tile"></div>
+            <div id="tile14" class="tile"></div>
+            <div id="tile15" class="tile"></div>
+            <div id="tile16" class="tile"></div>
+            <div id="options">
+                <div class="option" id="remove">REMOVE</div>
+                <div class="option" id="toggleProp">PROPAGATION</div>
+                <div class="option" id="toggleDir">DIRECTION</div>
+                <div class="option" id="reset">RESET</div>
+            </div>
+            <div id="mainCounter">0</div>
+        </main>
+
+        <aside id="rightAside">
+            <h3>INSTRUCTION</h3>
+            <p>
+                There are 16 different tiles. Each contains 3 nested ractangles:
+                the most nested <span style="color: #7fa99b">green one</span>, middle one which is <span style="color: #394a51">dark</span> 
+                and outer, <span style="color: #fdc57b">orange one</span>.
+            </p>
+            <p>You can click on rectangles to gain points:</p>
+            <ul>
+                <li><span class="bold">INNER</span> - 5 points</li>
+                <li><span class="bold">MIDDLE</span> - 2 points</li>
+                <li><span class="bold">OUTER</span> - 1 point</li>
+            </ul>
+            <p>You can also perform some actions on tiles:</p>
+            <ul>
+                <li><span class="bold">REMOVE</span> - click and choose specific tile to be removed</li>
+                <li><span class="bold">PROPAGATION</span> - on/off the event propagation</li>
+                <li><span class="bold">DIRECTION</span> - toggle the direction of propagation</li>
+                <li><span class="bold">RESET</span> - reset the overall score</li>
+            </ul>
+        <textarea readonly id="textarea"></textarea>
+        </aside>
+
+        <footer id="footer">
+            <p>Created by <span>Bartosz Kowal</span> &copy2023</p>
+		    <p><a href="https://github.com/barkow96" target="blank">Click to check out my GITHUB profile</a></p>
+        </footer>
+    </div>
+</body>
+</html>

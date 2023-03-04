@@ -1,0 +1,279 @@
+:root {
+    --COLOR1: #394a51;
+    --COLOR2: #fbf2d5;
+    --COLOR3: #101820FF;
+    --COLOR4: #7fa99b;
+    --COLOR5: #fdc57b;
+    --COLOR6: white;
+    --COLOR7: gray;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    word-wrap: break-word;
+    background-color: var(--COLOR2);
+    color: var(--COLOR3);
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--COLOR3);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+    text-align: center;
+}
+
+#header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(--COLOR3);
+    background-image: linear-gradient(to right, var(--COLOR5), var(--COLOR4));
+}
+
+#leftSidebar {
+    grid-area: left;
+}
+
+#main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.tile {
+    height: 140px;
+    width: 23%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 10px 5px 5px var(--COLOR4);
+}
+
+.tile:hover {
+    width: 24%;
+}
+
+.no-tile {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--COLOR6);
+    background-color: var(--COLOR5);
+}
+
+.no-tile:hover {
+    font-size: 20px;
+}
+
+.removable {
+    cursor: no-drop;
+    background-color: var(--COLOR7);
+}
+
+.outer {
+    width: 80%;
+    height: 80%;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--COLOR5);
+}
+
+.middle {
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--COLOR1);
+}
+
+.inner {
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: var(--COLOR4);    
+}
+
+#rightSidebar {
+    grid-area: right;
+}
+
+#textarea {
+    min-width: 90%;
+    min-height: 200px;
+}
+
+.counter {
+    font-weight: bold;
+}
+
+#options {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    width: 35%;
+    min-width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--COLOR1);
+    box-shadow: 10px 5px 5px var(--COLOR4);
+    color: var(--COLOR6);
+}
+
+.option:hover {
+    background-color: var(--COLOR6);
+    color: var(--COLOR1);
+}
+
+.enabled {
+    font-size: 16px;
+    background-color: var(--COLOR6);
+    color: var(--COLOR1);    
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#mainCounter {
+    width: 10%;
+    height: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--COLOR5);
+    border: 2px solid var(--COLOR3);
+    box-shadow: 10px 5px 5px var(--COLOR4);
+}
+
+#footer {
+    grid-area: footer;
+    border-top: 2px solid var(--COLOR3);
+    border-bottom: 2px solid var(--COLOR3);
+    background-image: linear-gradient(to right, var(--COLOR4), var(--COLOR5));
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "left right"
+        "footer footer";
+    }
+
+    .tile {
+        width: 40%;
+    }
+
+    .tile:hover {
+        width: 42%;
+    }
+
+    .option {
+        font-size: 12px;
+    }
+
+    .mainCounter {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header"
+        "main"
+        "left"
+        "right"
+        "footer";
+    }
+
+    #header {
+        position: static;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .option {
+        font-size: 10px;
+    }
+
+    .mainCounter {
+        font-size: 16px;
+    }
+}
