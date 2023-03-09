@@ -178,6 +178,7 @@ h2 {
     background-color: var(--COLOR1);
     box-shadow: 10px 5px 5px var(--COLOR4);
     color: var(--COLOR6);
+    transition: 300ms;
 }
 
 .option:hover {
